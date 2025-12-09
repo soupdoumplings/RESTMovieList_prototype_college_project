@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINÉMA COLLECTION</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;500;700&family=Manrope:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-border"></div>
+
+    <header class="main-header">
+        <div class="brand">MAISON DE CINÉMA</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">COLLECTION</a></li>
+                <li><a href="#">ARCHIVE</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>THE<br>CURATED<br>LIST</h1>
+            <p class="subtitle">AUTUMN / WINTER 2025</p>
+        </section>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <div class="form-container">
+                    <h2>NEW ENTRY</h2>
+                    <form id="add-movie-form">
+                        <div class="input-group">
+                            <label for="title">TITLE</label>
+                            <input type="text" id="title" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="genre">GENRE</label>
+                            <input type="text" id="genre">
+                        </div>
+                        <div class="input-group">
+                            <label for="year">YEAR</label>
+                            <input type="number" id="year" required>
+                        </div>
+                        <button type="submit" class="btn-luxury">ADD TO COLLECTION</button>
+                    </form>
+                </div>
+            </aside>
+
+            <section class="collection-display">
+                <div class="controls">
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="SEARCH COLLECTION...">
+                    </div>
+                </div>
+
+                <div id="movie-list" class="movie-grid">
+                    <!-- Movies injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 MAISON DE CINÉMA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>

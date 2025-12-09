@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+}
+
+.page-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #000000;
+    margin: 10px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Header */
+.main-header {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    margin: 10px 10px 0 10px;
+}
+
+.brand {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
+}
+
+.hero h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.4em;
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+/* Layout */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    min-height: 60vh;
+    border-top: 1px solid #000000;
+    margin: 0 10px 10px 10px;
+}
+
+/* Sidebar / Form */
+.sidebar {
+    border-right: 1px solid #000000;
+    padding: 3rem;
+    background-color: #fafafa;
+}
+
+.form-container h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+    color: #000000;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-bottom-color: #000000;
+}
+
+.btn-luxury {
+    width: 100%;
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-luxury:hover {
+    background-color: #D4AF37;
+}
+
+/* Collection Display */
+.collection-display {
+    padding: 3rem;
+}
+
+.controls {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-wrapper input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 0.5rem;
+    width: 300px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+}
+
+/* Movie Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.movie-item {
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+}
+
+.movie-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.movie-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.movie-meta {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: #555555;
+    text-transform: uppercase;
+}
+
+.movie-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.movie-item:hover .movie-actions {
+    opacity: 1;
+}
+
+.movie-actions button {
+    background: none;
+    border: 1px solid #000000;
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.btn-delete {
+    border-color: #ff0000 !important;
+    color: #ff0000;
+}
+
+.btn-delete:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #000000;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
